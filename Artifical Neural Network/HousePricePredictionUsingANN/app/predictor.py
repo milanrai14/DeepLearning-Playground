@@ -1,7 +1,7 @@
 from model_loader import model, columns, scaler
 import pandas as pd 
 
-def get_house_prediction(data):
+def predict_house_price(data):
     #Create Dictionary
     input_data = {}
 
