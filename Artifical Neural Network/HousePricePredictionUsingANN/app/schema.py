@@ -1,5 +1,4 @@
 from pydantic import BaseModel
-from typing import Literal
 class HouseRequest(BaseModel):
     longitude: float
     latitude: float
