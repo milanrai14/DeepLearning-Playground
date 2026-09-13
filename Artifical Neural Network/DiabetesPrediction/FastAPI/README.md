@@ -31,7 +31,7 @@ Where:
 
 ---
 
-## 🧠 Machine Learning Model
+## 🧠 Deep Learning Model
 
 The backend uses an **Artificial Neural Network (ANN)** trained on the Diabetes dataset.
 
@@ -50,32 +50,6 @@ The model expects the following 8 features:
 | `DiabetesPedigreeFunction` | Diabetes pedigree function   |
 | `Age`                      | Age of the patient           |
 
----
-
-## 📁 Project Structure
-
-```text
-DiabetesPrediction/
-│
-├── FastAPI/
-│   │
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── schemas.py
-│   │   ├── model_loader.py
-│   │   ├── recommender.py
-│   │   └── model/
-│   │       ├── best_ann_model.keras
-│   │       ├── scaler.pkl
-│   │       └── columns.pkl
-│   │
-│   ├── requirements.txt
-│   └── venv/
-│
-└── README.md
-```
-
-> Adjust the filenames if your actual project uses different module names.
 
 ---
 
@@ -90,73 +64,6 @@ DiabetesPrediction/
 * Scikit-learn
 * NumPy
 * Joblib
-
----
-
-## ⚙️ Installation
-
-### 1. Clone the repository
-
-```bash
-git clone <your-repository-url>
-```
-
-Navigate into the project:
-
-```bash
-cd DiabetesPrediction/FastAPI
-```
-
----
-
-### 2. Create a virtual environment
-
-```bash
-python -m venv venv
-```
-
-Activate the environment on Windows:
-
-```powershell
-.\venv\Scripts\Activate.ps1
-```
-
----
-
-### 3. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## ▶️ Run the API
-
-Navigate into the `app` directory:
-
-```powershell
-cd app
-```
-
-Start FastAPI:
-
-```powershell
-uvicorn main:app --reload
-```
-
-Or use:
-
-```powershell
-python -m uvicorn main:app --reload
-```
-
-The API will run at:
-
-```text
-http://127.0.0.1:8000
-```
-
 ---
 
 ## 📚 API Documentation
@@ -205,34 +112,6 @@ The endpoint accepts patient information in JSON format.
 
 ---
 
-## 🛡️ Input Validation
-
-The API uses **Pydantic** to validate incoming data.
-
-For example, invalid values such as:
-
-```json
-{
-  "Age": 0
-}
-```
-
-can be rejected before the data reaches the ANN model.
-
-Example validation:
-
-```python
-Age: int = Field(gt=0)
-```
-
-This ensures that:
-
-```text
-Age > 0
-```
-
----
-
 ## 🔄 Prediction Workflow
 
 The backend follows this pipeline:
@@ -264,24 +143,6 @@ Probability
    ▼
 JSON Response
 ```
-
----
-
-## 💾 Saved Model Files
-
-### `best_ann_model.keras`
-
-The trained ANN model saved using the modern **Keras `.keras` format**.
-
-### `scaler.pkl`
-
-The `StandardScaler` used during model training.
-
-The same scaler must be used when processing new input data.
-
-### `columns.pkl`
-
-Stores the feature order used during training to ensure that the API sends features to the model in the correct order.
 
 ---
 
