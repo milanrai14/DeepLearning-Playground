@@ -1,0 +1,10 @@
+[33mc5c7239[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: rebase (abort): returning to refs/heads/main
+[33mc5c7239[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{1}: rebase (abort): returning to refs/heads/main
+[33ma0c90e2[m HEAD@{2}: pull origin main: Merge made by the 'ort' strategy.
+[33m26e93be[m HEAD@{3}: commit: push
+[33m28ea04e[m HEAD@{4}: rebase (pick): Integrate to FastAPI
+[33mf00c77d[m HEAD@{5}: commit: push
+[33mc5c7239[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{6}: commit: push
+[33m7e86f2c[m HEAD@{7}: commit: Integrate to FastAPI
+[33m40b1365[m HEAD@{8}: commit: push
+[33m70b2587[m HEAD@{9}: commit: push
